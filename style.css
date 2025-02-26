@@ -1,0 +1,124 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+body {
+    font-family: "Raleway", Arial, sans-serif;
+    margin: 25px;
+}
+
+nav {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0065FC;
+    text-decoration: none;
+}
+
+#logo{
+	margin-right: auto;
+}
+
+#menu {
+    display: flex;
+    gap: 68px;
+    list-style: none;
+
+}
+
+#menu a {
+    color: #0065FC;
+    text-decoration: none;
+    align-items: center;
+
+
+}
+h1 {
+    font-size: 22px;
+     gap: inherit;
+}
+
+#bouton-de-Recherche{
+	background-color: #0065FC;
+
+}
+
+button#Bouton-de-Recherche {
+    background-color: #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    border-color:#0065FC;
+    color: white; 
+
+}
+
+
+button#Economique {
+    background-color: white;
+    border-radius: 15px;
+    border-color: #D9D9D9;
+}
+
+.fa-money-bill-wave:before {
+    content: "\f53a";
+    color: #0065FC;
+} 
+
+button#familial{
+	background-color: white;
+	border-color:#D9D9D9;
+	border-radius: 15px;
+}
+
+.fa-child:before {
+    content: "\f53a";
+    color: #0065FC;
+} 
+
+button#Romantique {
+    background-color: white;
+    border-radius: 15px;
+    border-color: #D9D9D9;
+}
+
+.fa-heart:before {
+    content: "\f004";
+    color: #0065FC;
+}
+
+button#Nospepites {
+    background-color: white;
+    border-radius: 15px;
+    border-color: #D9D9D9;
+}
+
+section#hebergement-marseille {
+    background: red;
+    border-radius: 15px;
+    height: 444px;
+    width: fit-content;
+}
+
+
+.div-carte-herbergement{
+	background-color: green;
+	    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
