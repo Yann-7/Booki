@@ -1,6 +1,7 @@
 */****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 :root {
     --main-color: #0065FC;
@@ -15,6 +16,7 @@ body {
     justify-content: center;
     max-width: 100%;
     width:100%;
+    margin: 0px;
     gap: 35px;
     padding-right: 50px;
     padding-left: 50px;
@@ -43,9 +45,9 @@ nav a:hover{
 }
 .logo{
     margin-right: auto;/*Prendre tout la place posible qui reste sur la page*/
-    gap: 10px;
+    gap:10px;
     padding-top: 30px;
-    padding-right: 50px;
+    margin-right:auto;
     padding-bottom: 30px;
     width:61px;
     height:auto;
@@ -59,7 +61,7 @@ nav a:hover{
 }
 
 .slogan{
-    width: 1340px;
+    width:100%;
     gap: 8px;
 
 
@@ -74,8 +76,7 @@ nav a:hover{
 
 }
 i.fa-solid.fa-location-dot {
-    width: 25px;
-    height: 30px;
+    width: 50px;
     border-width: 1px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -94,7 +95,6 @@ input[type="text"] {
     font-weight: bold;
 }
 .btn-recherche{
-    gap: 10px;
     padding-top: 15px;
     padding-right: 16px;
     padding-bottom: 15px;
@@ -107,8 +107,11 @@ input[type="text"] {
     color: white;
     font-weight: bold;
 }
+
+.barre-de-recherchetel{
+    display:none;
+}
 .fa-money-bill{
-    gap: 10px;
     padding-top: 4px;
     padding-right: 19px;
     padding-bottom: 4px;
@@ -139,7 +142,6 @@ input[type="text"] {
     height: 50;
     top: 41px;
     left: 328px;
-    gap: 10px;
     padding-top: 4px;
     padding-right: 19px;
     padding-bottom: 4px;
@@ -152,7 +154,6 @@ input[type="text"] {
     height: 50;
     top: 41px;
     left: 507px;
-    gap: 10px;
     padding-top: 4px;
     padding-right: 19px;
     padding-bottom: 4px;
@@ -160,13 +161,19 @@ input[type="text"] {
     border-width: 2px;
 
 }
+
+b {
+    display: flex;
+    align-items: center;
+    margin-left:12px;
+}
 .filtres{
        margin-top: 12px;
        padding-bottom: 15px;
+       display: flex;
 
 }
 .filtres button{
-    gap: 10px;
     padding-top: 4px;
     padding-right: 19px;
     padding-bottom: 4px;
@@ -176,7 +183,11 @@ input[type="text"] {
     height: 50px;
     background-color: white;
     font-weight: bold;
-    border: 2px solid #D9D9D9,
+    margin-left:12px;
+    border:2px solid #D9D9D9,
+
+
+
 }
 .filtres button:hover{
     background: #DEEBFF;
@@ -223,18 +234,17 @@ margin-top: 0px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-.carte-hebergements .card {
-    width: 200px;
-    gap: 8px;
 
-}
 .carte-hebergements{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    gap: 10px;
     transition: transform 0.3s ease-in-out;}
+
+.carte-hebergements >a{
+    width: 33%;
+}
 
  
 .card img {
@@ -277,7 +287,7 @@ margin-top: 0px;
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width:65%;
 }
 .hebergements-a {
     display: inline-block;
@@ -440,6 +450,30 @@ flex-direction: column;
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+
+    .filtres{
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .filtres button{
+        padding-left:5px;
+        height:50px;
+        width: 100%;
+        padding-right:8px;
+        min-width: 150px;
+        flex-grow:1;
+        flex:1 1calc(50%-10px)
+
+    }
+
+
+
+
+
     .hebergements-and-populaires {
         flex-direction: column;
         display: flex;
@@ -454,13 +488,6 @@ flex-direction: column;
     .carte-hebergement{
         display: flex;
         justify-content: space-around;
-    }
-
-    .carte-hebergements .card{
-        width: 300px;
-        
-
-
     }
 
    .populaires {
@@ -489,17 +516,32 @@ flex-direction: column;
 /* Small devices (phones, less than 768px) */
 @media (max-width:768px) {
 
+    .main-container{
+        padding-left:0px;
+        padding-right:0px;
+    }
+
     body {
     padding-left:0px;
+    padding-right:0px;
+    }
     
 
     .logo{ 
         margin-right: initial;
     }
 
+    ul {
+    padding: 0px;
+}
+
+    nav a {
+    padding: 100PX;
+}
+
 
     h1 {
-    font-size:15px;
+    font-size:22px;
     }
 
     p {
@@ -513,10 +555,52 @@ flex-direction: column;
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 0%;
+    padding-left:50px;
     }
+
+    
+    
+
+    .btn-recherchetel {
+            padding-top: 15px;
+    padding-right: 16px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-width: 1px;
+    background: #0065FC;
+    border: 1px solid #0065FC;
+    color: white;
+    font-weight: bold;
+    }
+
+    .barre-de-recherche{
+        display: none;
+    }
+
+
+    .barre-de-recherchetel{
+        padding-left:50px;
+        display: flex;
+    }
+
+    .n-fa-solid fa-magnifying-glass{
+        font-size: 16px;
+
+    }
+
+    b {
+    padding: 12px;
+}
+    
 
 .filtres {
     padding-bottom:none;
+    }
+
+    .carte-hebergements{
+        flex-direction: column;
     }
 
 section.hebergements {
@@ -531,6 +615,8 @@ section.hebergements {
 
 .hebergements-and-populaires{
     flex-direction: column-reverse;
+    width:100%;
+    padding:0px;
     }
 
     .populaires {
@@ -545,7 +631,8 @@ section.hebergements {
     }
 
     .populaires-cards a{
-        width:300px;
+        width:100%;
+
     }
 
 
@@ -575,23 +662,41 @@ section.hebergements {
 
     }
 
+    .carte-hebergements >a{
+    width:100%;
+}
+
+    .carte-hebergements .card{
+        width:100%;
+    }
+
     .activites-container{
         flex-direction:column;
+        padding: 50px;
     }
 
     .activites .card {
         width:100%;
     } 
 
+    .section-title-activites{
+        margin: 30px;
+
+    }
+
+    .activites .card-title {
+        text-align: left;
+    } 
+
     .activites img{
-        width: 315;
-        height: 100;
-        border-radius:20px;
+        width:100%;
+        height: 100px;
+        border-radius:20px 20px 0 px 0px;
 
     }
 
     footer{
-        width: 375px;
+        width:100%;
         height:461px;
 
     }
