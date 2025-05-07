@@ -91,7 +91,8 @@ input[type="text"] {
     font-weight: bold;
     border: 1px;
     font-size:18px;
-    margin-left:10px;
+    padding-left:10px;
+    border:1px solid #F2F2F2;
 }
 
 input::placeholder {
@@ -593,7 +594,7 @@ flex-direction: column;
         text-decoration: none;
         color: black;
         position: relative;
-        border-bottom: 1px solid #D9D9D9;
+        border-bottom: 3px solid #F2F2F2;
     }
 
     .nav a:hover {
@@ -615,6 +616,7 @@ flex-direction: column;
 
     .slogan {
     padding:30px;
+    padding-top: 0px;
     }
 
     .btn-recherchetel {
@@ -623,6 +625,7 @@ flex-direction: column;
     border: none;
     padding: 12px 16px;
     border-radius: 15px;
+    margin-left: -15px;
     }
 
     .btn-recherchetel i {
@@ -642,10 +645,11 @@ flex-direction: column;
 
     .barre-de-recherchetel input[type="text"] {
         display: flex;
-        border-radius: 15px 0 0 15px;
+        border-radius:0px;
         padding: 12px;
         font-size: 16px;
         width:calc(100% + 98px );
+        border: 1px solid #F2F2F2;
     }
 
     .fa-solid.fa-magnifying-glass{
@@ -664,7 +668,7 @@ flex-direction: column;
 
     .filtres button{
         margin-bottom:20px;
-        width:calc(50% - 20px);
+        width:calc(50% - 5px);
         padding: 10px 20px;
         display: flex;
         align-items: center;
@@ -701,7 +705,7 @@ flex-direction: column;
     }
     nav a:hover{
         border-top:none;
-        border-bottom:3px solid #0065FC ;
+        border-bottom-color: #0065FC ;
         color: #0065FC;
     }
     .logo{
@@ -866,6 +870,10 @@ flex-direction: column;
         height:auto;
     }
 
+    .footer-column {
+    width: 100%;
+}
+
     .footer-column h3{
         padding-left:30px;
         padding-top:20px;
@@ -883,6 +891,14 @@ flex-direction: column;
         display: contents;
     }
 
+
+}
+
+@media (max-width:390px) {
+    .filtres button{
+        width:100%;
+        max-width:100%;
+    }
 }
 
 
